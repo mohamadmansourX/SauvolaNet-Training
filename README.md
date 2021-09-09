@@ -11,7 +11,8 @@ My Main Contribution is in the following:.
 ### TODO List
 - [x] [Training](#training). Added training functions for both pretrained and from scratch options 
 - [x] [Configuration](docs/Training_Config.md) file to customize nearly everything in the pipeline.
-- [ ] ImageAugmentations
+- [x] Wandb API Support (Just add WandbCallback in the callbacks in Config file).
+- [ ] Image Augmentations
 
 ***
 
