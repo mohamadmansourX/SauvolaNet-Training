@@ -1,17 +1,16 @@
+This is an UNOFFICIAL repo for the SauvolaNet (ICDAR2021).  For the Original repo visi the following [URL](https://github.com/Leedeng/SauvolaNet.git)
+
 # SauvolaNet: Learning Adaptive Sauvola Network
 
 <img src="docs/outputs.png" width="100%">
 
-
 ***
-
-This is an UNOFFICIAL repo for the SauvolaNet (ICDAR2021).  For the Original repo visi the following [URL](https://github.com/Leedeng/SauvolaNet.git)
-
-My Main Contribution is in the following:.
+My Main Contribution are in the following:
 ### TODO List
 - [x] [Training](#training). Added training functions for both pretrained and from scratch options 
 - [x] [Configuration](docs/Training_Config.md) file to customize nearly everything in the pipeline.
-- [ ] ImageAugmentations
+- [x] Wandb API Support (Just add WandbCallback in the callbacks in Config file).
+- [ ] Image Augmentations
 
 ***
 
@@ -55,13 +54,14 @@ optional arguments:
                         configuration arguments. e.g.: -a Train.loss=mse
 ```
 
-##Dataset
+## Dataset
 
 For **each** image there should be an image for the original image e.g. `TRAIN_image1_source.jpg`, and an image for the ground truth image e.g. `TRAIN_image1_target.jpg`
 
 The *pattern* to match source and groundtruth images is the name before the `'_source.*'` or `'_target.*'`
 Besides, all the names should begin with `'TRAIN_'`
 ⟶ **In Summury**, for each image there should be the following:
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(`'TRAIN_<uniqueID>_source.<Extention>'`, `'TRAIN_<uniqueID>_target.<Extention>'`)
 
 # Dependency
