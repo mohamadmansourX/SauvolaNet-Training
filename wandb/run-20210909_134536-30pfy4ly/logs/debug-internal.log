@@ -1,0 +1,36 @@
+2021-09-09 13:45:37,322 INFO    MainThread:183802 [internal.py:wandb_internal():91] W&B internal server running at pid: 183802, started at: 2021-09-09 13:45:37.322414
+2021-09-09 13:45:37,323 DEBUG   HandlerThread:183802 [handler.py:handle_request():120] handle_request: check_version
+2021-09-09 13:45:37,323 INFO    WriterThread:183802 [datastore.py:open_for_write():77] open: /home/mansour/Music/OtherWork/Sauvalo/SauvolaNet/wandb/run-20210909_134536-30pfy4ly/run-30pfy4ly.wandb
+2021-09-09 13:45:37,325 DEBUG   SenderThread:183802 [sender.py:send():160] send: header
+2021-09-09 13:45:37,325 DEBUG   SenderThread:183802 [sender.py:send():160] send: request
+2021-09-09 13:45:37,325 DEBUG   SenderThread:183802 [sender.py:send_request():169] send_request: check_version
+2021-09-09 13:45:37,595 DEBUG   SenderThread:183802 [sender.py:send():160] send: run
+2021-09-09 13:45:37,954 INFO    SenderThread:183802 [sender.py:_start_run_threads():654] run started: 30pfy4ly with start time 1631184336
+2021-09-09 13:45:37,954 DEBUG   SenderThread:183802 [sender.py:send():160] send: summary
+2021-09-09 13:45:37,954 INFO    SenderThread:183802 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-09-09 13:45:37,955 DEBUG   HandlerThread:183802 [handler.py:handle_request():120] handle_request: run_start
+2021-09-09 13:45:38,975 DEBUG   HandlerThread:183802 [meta.py:__init__():39] meta init
+2021-09-09 13:45:38,975 DEBUG   HandlerThread:183802 [meta.py:__init__():53] meta init done
+2021-09-09 13:45:38,975 DEBUG   HandlerThread:183802 [meta.py:probe():210] probe
+2021-09-09 13:45:38,981 DEBUG   HandlerThread:183802 [meta.py:_setup_git():200] setup git
+2021-09-09 13:45:39,003 DEBUG   HandlerThread:183802 [meta.py:_setup_git():207] setup git done
+2021-09-09 13:45:39,004 DEBUG   HandlerThread:183802 [meta.py:_save_code():89] save code
+2021-09-09 13:45:39,012 DEBUG   HandlerThread:183802 [meta.py:_save_code():110] save code done
+2021-09-09 13:45:39,012 DEBUG   HandlerThread:183802 [meta.py:_save_patches():127] save patches
+2021-09-09 13:45:40,506 DEBUG   HandlerThread:183802 [meta.py:_save_patches():169] save patches done
+2021-09-09 13:45:40,506 DEBUG   HandlerThread:183802 [meta.py:_save_pip():57] save pip
+2021-09-09 13:45:40,507 DEBUG   HandlerThread:183802 [meta.py:_save_pip():71] save pip done
+2021-09-09 13:45:40,507 DEBUG   HandlerThread:183802 [meta.py:_save_conda():78] save conda
+2021-09-09 13:45:42,726 WARNING MainThread:183802 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2021-09-09 13:45:42,876 DEBUG   HandlerThread:183802 [meta.py:_save_conda():86] save conda done
+2021-09-09 13:45:42,877 DEBUG   HandlerThread:183802 [meta.py:probe():252] probe done
+2021-09-09 13:45:42,880 DEBUG   SenderThread:183802 [sender.py:send():160] send: files
+2021-09-09 13:45:42,880 INFO    SenderThread:183802 [sender.py:_save_file():781] saving file wandb-metadata.json with policy now
+2021-09-09 13:45:42,880 INFO    SenderThread:183802 [sender.py:_save_file():781] saving file code/train.py with policy now
+2021-09-09 13:45:42,880 INFO    SenderThread:183802 [sender.py:_save_file():781] saving file diff.patch with policy now
+2021-09-09 13:45:45,790 WARNING MainThread:183802 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2021-09-09 13:45:45,791 ERROR   MainThread:183802 [internal.py:wandb_internal():149] Internal process interrupted.
+2021-09-09 13:45:45,880 INFO    WriterThread:183802 [datastore.py:close():258] close: /home/mansour/Music/OtherWork/Sauvalo/SauvolaNet/wandb/run-20210909_134536-30pfy4ly/run-30pfy4ly.wandb
+2021-09-09 13:45:45,881 INFO    SenderThread:183802 [sender.py:finish():884] shutting down sender
+2021-09-09 13:45:45,882 INFO    HandlerThread:183802 [handler.py:finish():624] shutting down handler
+2021-09-09 13:45:47,659 INFO    MainThread:183802 [internal.py:handle_exit():78] Internal process exited

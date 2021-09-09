@@ -1,0 +1,34 @@
+Global:
+  use_gpu: False
+  model_name: Sauvalo_Finetune
+  # This should be at the very beginning
+  # import os
+  # os.environ['CUDA_VISIBLE_DEVICES']='-1'
+  # import tensorflow as tf
+  #
+  pretrained_model: /hsome/mansour/Music/OtherWork/Sauvalo/SauvolaNet/pretrained_models/Sauvola_v3_att_w7.15.23.31.39.47.55.63_k1_R1_a1_inorm_S256_R0.02_B8_lr0.001_E30-Acc0.9895-Tacc0.9282-F0.9448-PSNR20.59.h5 #Pretrained Model Path, Note having pretrained model will ommit all Architecture options (Will load the model from filepath directly)
+
+  
+Train:
+  optimizer: adam #Check https://keras.io/api/optimizers/
+  loss: hinge #Check https://keras.io/api/losses/
+  epochs: 100
+  batch_size: 1
+  dataset: Dataset #Dataset Dir Path
+  Callbacks:
+    patience: 15
+    callbacks: ['WandbCallback','ModelCheckpoint','TensorBoard','EarlyStopping','ReduceLROnPlateau']
+
+Architecture:
+  SauvolaMultiWindow:
+    window_size_list: [3,5,7,11,15,19] #list of int, the used window sizes to compute Sauvola based thresholds
+    norm_type: 'bnorm' #str, one of {'inorm', 'bnorm'}, the normalization layer used in the conv_blocks {`inorm`: InstanceNormalization, `bnorm`: BatchNormalization}
+    activation: 'relu' #the used activation function
+    base_filters: 4 #the number of base filters used in conv_blocks, i.e. the 1st conv uses `base_filter` of filters the 2nd conv uses `2*base_filter` of filters and Kth conv uses `K*base_filter` of filters
+    init_k: 0.2 #Initialize param k
+    init_R: 0.5 #Initialize param R
+    train_k: True #whether or not train the param k in Sauvola binarization
+    train_R: True #whether or not train the param R in Sauvola binarization
+  DifferenceThresh:
+    init_alpha: 16 #Initialize param alpha
+    train_alpha: True #whether or not train the param alpha in Sauvola binarization

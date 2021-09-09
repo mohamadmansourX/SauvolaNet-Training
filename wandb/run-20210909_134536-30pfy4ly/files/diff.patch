@@ -1,0 +1,111 @@
+diff --git a/SauvolaDocBin/layerUtils.py b/SauvolaDocBin/layerUtils.py
+index 4b3ded0..9cdd635 100644
+--- a/SauvolaDocBin/layerUtils.py
++++ b/SauvolaDocBin/layerUtils.py
+@@ -36,13 +36,14 @@ class SauvolaMultiWindow(Layer):
+                  init_R=0.5,
+                  train_k=False,
+                  train_R=False,
++                 SMWConf=None,
+                  **kwargs):
+-        self.window_size_list = window_size_list
+-        self.n_wins = len(window_size_list)
+-        self.init_k = init_k
+-        self.init_R = init_R
+-        self.train_k = train_k
+-        self.train_R = train_R
++        self.window_size_list = SMWConf['window_size_list']
++        self.n_wins = len(self.window_size_list)
++        self.init_k = SMWConf['init_k']
++        self.init_R = SMWConf['init_R']
++        self.train_k = SMWConf['train_k']
++        self.train_R = SMWConf['train_R']
+         super(SauvolaMultiWindow, self).__init__(**kwargs)
+     def get_config(self) :
+         base_config = super().get_config()
+@@ -166,11 +167,12 @@ class DifferenceThresh(Layer) :
+                  img_max=1., 
+                  init_alpha=16.,
+                  train_alpha=False,
++                 DTConf=None,
+                  **kwargs) :
+         self.img_min = img_min
+         self.img_max = img_max
+-        self.init_alpha = init_alpha
+-        self.train_alpha = train_alpha
++        self.init_alpha = DTConf['init_alpha']
++        self.train_alpha = DTConf['train_alpha']
+         super().__init__(**kwargs)
+     def build(self, input_shapes) :
+         img_shape, th_shape = input_shapes
+diff --git a/SauvolaDocBin/modelUtils.py b/SauvolaDocBin/modelUtils.py
+index 2db95eb..e2aec60 100644
+--- a/SauvolaDocBin/modelUtils.py
++++ b/SauvolaDocBin/modelUtils.py
+@@ -73,7 +73,8 @@ def create_multiscale_sauvola(window_size_list=[3,5,7,11,15,19],
+                               train_alpha=False, 
+                               norm_type='bnorm',
+                               base_filters=4,
+-                              img_range=(0.,1.)) :
++                              img_range=(0.,1.),
++                              config=None) :
+     """Create a multiscale Sauvola binarization model
+     
+     # INPUTS:
+@@ -96,6 +97,8 @@ def create_multiscale_sauvola(window_size_list=[3,5,7,11,15,19],
+             and Kth conv uses `K*base_filter` of filters
+         img_range: tuple of floats
+             the min and max values of input image tensor
++        config: dict
++            contains all the above and additional values #TODO include them here
+     
+     # NOTE:
+     Please refer the below link for the meaning of k and R in Sauvola Binarization
+@@ -107,28 +110,32 @@ def create_multiscale_sauvola(window_size_list=[3,5,7,11,15,19],
+               -> [WindownAttentionBranch] -> winAtt5D --|-> [attention] -> th -> diff
+ 
+     """
++    SMWConf=config['Architecture']['SauvolaMultiWindow']
+     im_inp = Input(shape=(None,None,1), name='img01_inp')
+     th = SauvolaMultiWindow(window_size_list=window_size_list, 
+                             train_k=train_k, 
+                             train_R=train_R, 
+-                            name='sauvola')(im_inp)
++                            name='sauvola',
++                            SMWConf=SMWConf,)(im_inp)
+     # attention branch
+-    n = len(window_size_list)
+-    filters = base_filters
+-    t = int(np.ceil(np.log2(max(window_size_list)))) - 1
++    n = len(SMWConf['window_size_list'])
++    filters = SMWConf['base_filters']
++    t = int(np.ceil(np.log2(max(SMWConf['window_size_list'])))) - 1
+     # 1st block
+     f = conv_block(im_inp, 
+                    filters, 
++                   activation=SMWConf['activation'],
+                    suffix=0, 
+-                   norm_type=norm_type)
++                   norm_type=SMWConf['norm_type'])
+     # later blocks
+     for k in range(t) :
+         filters += base_filters
+         f = conv_block(f, 
+                        filters, 
++                       activation=SMWConf['activation'],
+                        dilation_rate=(2,2), 
+                        suffix=f'{k+1:d}', 
+-                       norm_type=norm_type)
++                       norm_type=SMWConf['norm_type'])
+     # attention
+     f = Conv2D(n,
+                (3,3), 
+@@ -144,7 +151,7 @@ def create_multiscale_sauvola(window_size_list=[3,5,7,11,15,19],
+     diff = DifferenceThresh(img_min=img_range[0], 
+                             img_max=img_range[1], 
+                             init_alpha=16., 
+-                            train_alpha=train_alpha)([im_inp, th])
++                            train_alpha=train_alpha,DTConf=config['Architecture']['DifferenceThresh'])([im_inp, th])
+     name = "_".join(['w'+'.'.join([f'{w}' for w in window_size_list]), f'k{int(train_k)}', f'R{int(train_R)}', f'a{int(train_alpha)}', f'{norm_type}'])
+     sauvola = Model(inputs=im_inp, outputs=diff, name='Sauvola_v3_att_' + name)
+     return sauvola

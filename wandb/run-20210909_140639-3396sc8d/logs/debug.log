@@ -1,0 +1,6 @@
+2021-09-09 14:06:39,788 INFO    MainThread:196058 [wandb_setup.py:_flush():69] setting env: {}
+2021-09-09 14:06:39,788 INFO    MainThread:196058 [wandb_init.py:_log_setup():336] Logging user logs to /home/mansour/Music/OtherWork/Sauvalo/SauvolaNet/wandb/run-20210909_140639-3396sc8d/logs/debug.log
+2021-09-09 14:06:39,788 INFO    MainThread:196058 [wandb_init.py:_log_setup():337] Logging internal logs to /home/mansour/Music/OtherWork/Sauvalo/SauvolaNet/wandb/run-20210909_140639-3396sc8d/logs/debug-internal.log
+2021-09-09 14:06:39,788 INFO    MainThread:196058 [wandb_init.py:init():369] calling init triggers
+2021-09-09 14:06:39,788 INFO    MainThread:196058 [wandb_init.py:init():376] wandb.init called with sweep_config: {}
+config: {}

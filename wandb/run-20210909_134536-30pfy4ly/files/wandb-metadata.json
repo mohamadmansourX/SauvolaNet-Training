@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.11.0-27-generic-x86_64-with-debian-bullseye-sid",
+    "python": "3.7.0",
+    "heartbeatAt": "2021-09-09T10:45:38.975810",
+    "startedAt": "2021-09-09T10:45:36.876599",
+    "docker": null,
+    "gpu": "GeForce GTX 1060 6GB",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/Leedeng/SauvolaNet.git",
+        "commit": "a9be8b3de685f3c3f31f272c06aff0a1d1a59f6d"
+    },
+    "email": "m.mansour@tecfrac.com",
+    "root": "/home/mansour/Music/OtherWork/Sauvalo/SauvolaNet",
+    "host": "MS-7C88",
+    "username": "mansour",
+    "executable": "/home/mansour/anaconda3/envs/v2/bin/python"
+}
