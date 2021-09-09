@@ -7,7 +7,7 @@
 
 This is an UNOFFICIAL repo for the SauvolaNet (ICDAR2021).  For the Original repo visi the following [URL](https://github.com/Leedeng/SauvolaNet.git)
 
-My Main Contribution is in the following:.
+My Main Contribution is in the following:
 ### TODO List
 - [x] [Training](#training). Added training functions for both pretrained and from scratch options 
 - [x] [Configuration](docs/Training_Config.md) file to customize nearly everything in the pipeline.
