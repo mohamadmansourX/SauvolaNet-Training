@@ -2,8 +2,9 @@
 Test Utils for Sauvola Document Binarization
 """
 
-import os
-os.environ['CUDA_VISIBLE_DEVICES']='-1'
+import os,yaml
+if not yaml.load(open('Config.yaml', 'rb'), Loader=yaml.Loader)['Global']['use_gpu']:
+    os.environ['CUDA_VISIBLE_DEVICES']='-1'
 import tensorflow as tf
 import pandas as pd
 import numpy as np
@@ -16,7 +17,6 @@ from tensorflow.keras.callbacks import ModelCheckpoint,TensorBoard,EarlyStopping
 from absl import logging
 from parse import parse
 import sys
-import yaml,os,json
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 
 class ArgsParser(ArgumentParser):
