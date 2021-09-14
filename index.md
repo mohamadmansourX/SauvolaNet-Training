@@ -14,6 +14,7 @@ My Main Contribution are in the following:
 
 ***
 <meta name="google-site-verification" content="MoWlMq9DcZjKhdytogH7xgZ3BVbu10dhbD__uGrMerg" />
+
 # Overview
 
 SauvolaNet is an end-to-end document binarization solution. It is optimal for three hyper-parameters of the classic Sauvola algorithm. Compare with existing solutions, SauvolaNet has followed advantages:
