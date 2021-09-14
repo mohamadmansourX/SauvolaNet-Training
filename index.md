@@ -1,3 +1,6 @@
+<head>
+  <meta name="google-site-verification" content="9BEL3y5tFz0_IvO50PcjdKAcH6s9CrbBQxmHcY_TygY" />
+</head>
 This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  For the Original repo visi the following [URL](https://github.com/Leedeng/SauvolaNet.git)
 
 # SauvolaNet: Learning Adaptive Sauvola Network
@@ -13,7 +16,6 @@ My Main Contribution are in the following:
 - [ ] Image Augmentations
 
 ***
-<meta name="google-site-verification" content="9BEL3y5tFz0_IvO50PcjdKAcH6s9CrbBQxmHcY_TygY" />
 
 
 # Overview
