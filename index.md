@@ -101,11 +101,23 @@ The *pattern* to match source and groundtruth images is the name before the `'_s
 Besides, all the names should begin with `'TRAIN_'`
 
 ## Example:
-| ImageID | Src Image: `TRAIN_<uniqueID>_source.<Extention>` | Target Image: `TRAIN_<uniqueID>_target.<Extention>` |
-| ------------ | ------------ | ------- |
-| P03 | `Dataset/TRAIN_P03_source.png`     | `Dataset/TRAIN_P03_source.png`     |
-| | <img src="Dataset/TRAIN_P03_source.png">      | <img src="Dataset/TRAIN_P03_target.png">     |
-
+<table>
+  <tr>
+    <th>ImageID</th>
+    <th>Src Image: <code>TRAIN_&lt;UniqueID&gt;_source.&lt;Extention&gt;</code></th>
+    <th>Target Image: <code>TRAIN_&lt;UniqueID&gt;_target.&lt;Extention&gt;</code> </th>
+  </tr>
+  <tr>
+    <td>P03</td>
+    <td> <code>Dataset/TRAIN_P03_source.png</code> </td>
+    <td><code>Dataset/TRAIN_P03_source.png</code> </td>
+  </tr>
+    <td></td>
+    <td><img src="Dataset/TRAIN_P03_source.png"> </td>
+    <td><img src="Dataset/TRAIN_P03_target.png"></td>
+  <tr>
+  </tr>
+</table>
 
 ## Available Datasets 
 We do not own the copyright of the dataset used in this repo.
