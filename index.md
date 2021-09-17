@@ -63,7 +63,7 @@ pip install opencv-python
 pip install parse
 ```
 
-Then play with the provided [notebook](https://github.com/mohamadmansourX/SauvolaNet-Training/blob/master/SauvolaNetDemo.ipynb).
+Then play with the provided [notebook](docs/SauvolaNetDemo).
 
 Alternatively, one may play with the inference code using this [google colab link](https://colab.research.google.com/drive/1aGYXVRuTf1dhoKSsOCPcB4vKULtplFSA?usp=sharing).
 
@@ -73,7 +73,7 @@ Alternatively, one may play with the inference code using this [google colab lin
 
 Edit `Config.yaml` file and simply run the following to start training: 
 
-(Check the following for more details on [Config parameters](docs/SauvolaNetDemo))
+(Check the following for more details on [Config parameters](docs/Training_Config))
 
 ```bash
 $ python train.py
