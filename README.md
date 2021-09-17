@@ -78,7 +78,7 @@ Alternatively, one may play with the inference code using this [google colab lin
 
 Edit `Config.yaml` file and simply run the following to start training: 
 
-(Check the following for more details on [Config parameters](docs/Training_Config.md))
+*(Check the following for more details on [Config parameters](docs/Training_Config.md))*
 
 ```bash
 $ python train.py
