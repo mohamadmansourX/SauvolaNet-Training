@@ -1,19 +1,27 @@
-This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  For the Original repo visi the following [URL](https://github.com/Leedeng/SauvolaNet.git)
+This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  For the Original repo visit the following [URL](https://github.com/Leedeng/SauvolaNet.git)
 
 # SauvolaNet: Learning Adaptive Sauvola Network
 
 <img src="docs/outputs.png" width="100%">
 
 ***
+# Contents
+- [Overview](#overview)
+- [Dependency](#dependency)
+- [Demo](#demo)
+- [Training](#training)
+- [Dataset](#dataset)
+
+
+***
 My Main Contribution are in the following:
-### TODO List
-- [x] [Training](#training). Added training functions for both pretrained and from scratch options 
+## TODO List
+- [x] [Training](#training). Added training functions for both pretrained and from scratch model. 
 - [x] [Configuration](docs/Training_Config.md) file to customize nearly everything in the pipeline.
 - [x] Wandb API Support (Just add WandbCallback in the callbacks in Config file).
 - [ ] Image Augmentations
 
 ***
-
 
 # Overview
 
@@ -32,38 +40,6 @@ More precisely, SauvolaNet consists of three modules, namely, Multi-window Sauvo
 - **AST generates pixelwise threshold by fusing the result of MWS and PWA.**
 
 <img src="docs/Structure2.png" width="50%">
-
-# Training
-
-
-## Training Script
-Configure `Config.yaml` file and simply run the following to start training: (Check the following for details on [Config parameters](docs/Training_Config.md))
-
-```bash
-$ python train.py
-```
-The following list can be viewed through --help
-```bash
-$ python train.py -h
-
-usage: train.py [-h] [-c CONF] [-a ARGS [ARGS ...]]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -c CONF, --conf CONF  configuration file path
-  -a ARGS [ARGS ...], --args ARGS [ARGS ...]
-                        configuration arguments. e.g.: -a Train.loss=mse
-```
-
-## Dataset
-
-For **each** image there should be an image for the original image e.g. `TRAIN_image1_source.jpg`, and an image for the ground truth image e.g. `TRAIN_image1_target.jpg`
-
-The *pattern* to match source and groundtruth images is the name before the `'_source.*'` or `'_target.*'`
-Besides, all the names should begin with `'TRAIN_'`
-⟶ **In Summury**, for each image there should be the following:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(`'TRAIN_<uniqueID>_source.<Extention>'`, `'TRAIN_<uniqueID>_target.<Extention>'`)
 
 # Dependency
 
@@ -87,11 +63,51 @@ pip install opencv-python
 pip install parse
 ```
 
-Then play with the provided ipython notebook.
+Then play with the provided [notebook](https://github.com/mohamadmansourX/SauvolaNet-Training/blob/master/SauvolaNetDemo.ipynb).
 
 Alternatively, one may play with the inference code using this [google colab link](https://colab.research.google.com/drive/1aGYXVRuTf1dhoKSsOCPcB4vKULtplFSA?usp=sharing).
 
-# Datasets
+
+# Training
+
+
+Edit `Config.yaml` file and simply run the following to start training: 
+
+(Check the following for more details on [Config parameters](docs/Training_Config.md))
+
+```bash
+$ python train.py
+```
+
+Can even edit some configurations directly from the command line.
+The following list can be viewed through --help
+```bash
+$ python train.py -h
+
+usage: train.py [-h] [-c CONF] [-a ARGS [ARGS ...]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONF, --conf CONF  configuration file path
+  -a ARGS [ARGS ...], --args ARGS [ARGS ...]
+                        configuration arguments. e.g.: -a Train.loss=mse
+```
+
+# Dataset
+
+For **each** image there should be an image for the original image e.g. `TRAIN_image1_source.jpg`, and an image for the ground truth image e.g. `TRAIN_image1_target.jpg`
+
+The *pattern* to match source and groundtruth images is the name before the `'_source.*'` or `'_target.*'`
+Besides, all the names should begin with `'TRAIN_'`
+
+## Example:
+| ImageID | Src Image: `TRAIN_<uniqueID>_source.<Extention>` | Target Image: `TRAIN_<uniqueID>_target.<Extention>` |
+| ------------ | ------------ | ------- |
+| P03 | `Dataset/TRAIN_P03_source.png`     | `Dataset/TRAIN_P03_source.png`     |
+| | <img src="Dataset/TRAIN_P03_source.png">      | <img src="Dataset/TRAIN_P03_target.png">     |
+
+
+## Available Datasets 
 We do not own the copyright of the dataset used in this repo.
 
 Below is a summary table of the datasets used in this work along with a link from which they can be downloaded:
