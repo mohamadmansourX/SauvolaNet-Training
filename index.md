@@ -15,7 +15,7 @@ This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  For the Original
 
 ***
 My Main Contribution are in the following:
-## TODO List
+#### TODO List
 - [x] [Training](#training). Added training functions for both pretrained and from scratch model. 
 - [x] [Configuration](docs/Training_Config) file to customize nearly everything in the pipeline.
 - [x] Wandb API Support (Just add WandbCallback in the callbacks in Config file).
