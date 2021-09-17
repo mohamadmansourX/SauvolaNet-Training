@@ -16,6 +16,7 @@ Documentation of [SauvolaNet-Training](https://mohamadmansourx.github.io/Sauvola
 - [Demo](#demo)
 - [Training](#training)
 - [Dataset](#dataset)
+- [Contact](#contact)Contact
 
 
 ***
@@ -134,7 +135,7 @@ Below is a summary table of the datasets used in this work along with a link fro
 | Synchromedia Multispectral dataset | http://tc11.cvc.uab.es/datasets/SMADI_1　|
 | Monk Cuper Set | https://www.ai.rug.nl/~sheng/ |
 
-# Concat
+# Contact
 
 For any **paper-related** questions, contact the [original authors](https://github.com/Leedeng/SauvolaNet#concat)
 
