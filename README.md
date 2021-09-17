@@ -20,7 +20,7 @@ Documentation of [SauvolaNet-Training](https://mohamadmansourx.github.io/Sauvola
 
 ***
 My Main Contribution are in the following:
-## TODO List
+#### TODO List
 - [x] [Training](#training). Added training functions for both pretrained and from scratch model. 
 - [x] [Configuration](docs/Training_Config.md) file to customize nearly everything in the pipeline.
 - [x] Wandb API Support (Just add WandbCallback in the callbacks in Config file).
