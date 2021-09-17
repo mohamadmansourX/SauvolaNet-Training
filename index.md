@@ -17,7 +17,7 @@ This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  For the Original
 My Main Contribution are in the following:
 ## TODO List
 - [x] [Training](#training). Added training functions for both pretrained and from scratch model. 
-- [x] [Configuration](docs/Training_Config.md) file to customize nearly everything in the pipeline.
+- [x] [Configuration](docs/Training_Config) file to customize nearly everything in the pipeline.
 - [x] Wandb API Support (Just add WandbCallback in the callbacks in Config file).
 - [ ] Image Augmentations
 
@@ -73,7 +73,7 @@ Alternatively, one may play with the inference code using this [google colab lin
 
 Edit `Config.yaml` file and simply run the following to start training: 
 
-(Check the following for more details on [Config parameters](docs/Training_Config.md))
+(Check the following for more details on [Config parameters](docs/SauvolaNetDemo))
 
 ```bash
 $ python train.py
