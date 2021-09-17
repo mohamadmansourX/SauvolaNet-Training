@@ -16,7 +16,7 @@ Documentation of [SauvolaNet-Training](https://mohamadmansourx.github.io/Sauvola
 - [Demo](#demo)
 - [Training](#training)
 - [Dataset](#dataset)
-- [Contact](#contact)Contact
+- [Contact](#contact)
 
 
 ***
