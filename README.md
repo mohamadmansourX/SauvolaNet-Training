@@ -138,4 +138,4 @@ Below is a summary table of the datasets used in this work along with a link fro
 
 For any **paper-related** questions, contact the [original authors](https://github.com/Leedeng/SauvolaNet#concat)
 
-For any **code-related** questions, contact feel free to contact me in the [issues](https://github.com/mohamadmansourX/SauvolaNet-Training/issues) section :)
+For any **code-related** questions, feel free to contact me in the [issues](https://github.com/mohamadmansourX/SauvolaNet-Training/issues) section :)
