@@ -63,7 +63,7 @@ pip install opencv-python
 pip install parse
 ```
 
-Then play with the provided [notebook].
+Then play with the provided [notebook](https://github.com/mohamadmansourX/SauvolaNet-Training/blob/master/SauvolaNetDemo.ipynb).
 
 Alternatively, one may play with the inference code using this [google colab link](https://colab.research.google.com/drive/1aGYXVRuTf1dhoKSsOCPcB4vKULtplFSA?usp=sharing).
 
