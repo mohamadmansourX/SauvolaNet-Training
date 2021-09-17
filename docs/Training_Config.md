@@ -29,7 +29,7 @@ The following list can be accessed by the terminal
 |      batch_size        |         Set Batch Size          |  `1`  |    |
 |      dataset        |         Set the Dataset path          |  `Dataset`  |  Datset Folder should contain all images with names=`TRAIN_*`, and for each image there should be ground truth and source having same name but one ending with `_source.png` and groundtruth with `_target.png` e.g. for one image: `Bickely2010_H01_source.png, Bickely2010_H01_target.png`|
 |      **Callbacks**        |         Callbacks Class          |    |    |
-|      callbacks        |         Set callbacks to be used          |  [`'ModelCheckpoint'`,`'TensorBoard'`,<br />`'EarlyStopping'`,`'ReduceLROnPlateau'`]`  |  Add `WandbCallback` to the list to enable [wandb API](https://wandb.ai/) Visualizations |
+|      callbacks        |         Set callbacks to be used          |  [`'ModelCheckpoint'`,`'TensorBoard'`,<br />`'EarlyStopping'`,`'ReduceLROnPlateau'`]  |  Add `WandbCallback` to the list to enable [wandb API](https://wandb.ai/) Visualizations |
 |      patience        |         Set patience to be used  in [`'EarlyStopping'`,<br />`'ReduceLROnPlateau'`]        |  `15`  |  Note in ReduceLROnPlateau the patiance is divied by 2  |
 
 
