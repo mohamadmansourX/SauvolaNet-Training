@@ -1,10 +1,15 @@
-This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  For the Original repo visit the following [URL](https://github.com/Leedeng/SauvolaNet.git)
+This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  
+
+For the Original repo visit the following [URL](https://github.com/Leedeng/SauvolaNet.git)
 
 # SauvolaNet: Learning Adaptive Sauvola Network
 
 <img src="docs/outputs.png" width="100%">
 
 ***
+
+Documentation of [SauvolaNet-Training](https://mohamadmansourx.github.io/SauvolaNet-Training/) can be found on [https://mohamadmansourx.github.io/SauvolaNet-Training/](https://mohamadmansourx.github.io/SauvolaNet-Training/)
+
 # Contents
 - [Overview](#overview)
 - [Dependency](#dependency)
