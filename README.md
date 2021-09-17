@@ -133,3 +133,9 @@ Below is a summary table of the datasets used in this work along with a link fro
 | Bickely-diary dataset | https://www.comp.nus.edu.sg/~brown/BinarizationShop/dataset.htm |
 | Synchromedia Multispectral dataset | http://tc11.cvc.uab.es/datasets/SMADI_1　|
 | Monk Cuper Set | https://www.ai.rug.nl/~sheng/ |
+
+# Concat
+
+For any **paper-related** questions, contact the [original authors](https://github.com/Leedeng/SauvolaNet#concat)
+
+For any **code-related** questions, contact feel free to contact me in the [issues](https://github.com/mohamadmansourX/SauvolaNet-Training/issues) section :)
