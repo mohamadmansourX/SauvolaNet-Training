@@ -8,7 +8,7 @@ For the Original repo visit the following [URL](https://github.com/Leedeng/Sauvo
 
 ***
 
-Documentation of [SauvolaNet-Training](https://mohamadmansourx.github.io/SauvolaNet-Training/) can be found on [https://mohamadmansourx.github.io/SauvolaNet-Training/](https://mohamadmansourx.github.io/SauvolaNet-Training/)
+Documentation of [SauvolaNet-Training](https://mohamadmansourx.github.io/SauvolaNet-Training/) can be found [here](https://mohamadmansourx.github.io/SauvolaNet-Training/)
 
 # Contents
 - [Overview](#overview)
