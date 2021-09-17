@@ -1,4 +1,5 @@
 # SauvolaNet-Training
 SauvolaNet: Learning Adaptive Sauvola Network
 
-[Docs](https://mohamadmansourx.github.io/SauvolaNet-Training)
+- [Documentation](https://mohamadmansourx.github.io/SauvolaNet-Training)
+- [ConfigFile](https://mohamadmansourx.github.io/SauvolaNet-Training/docs/Training_Config)
