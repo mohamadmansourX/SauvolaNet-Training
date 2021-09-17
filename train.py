@@ -1,7 +1,3 @@
-"""
-Test Utils for Sauvola Document Binarization
-"""
-
 import os,yaml
 if not yaml.load(open('Config.yaml', 'rb'), Loader=yaml.Loader)['Global']['use_gpu']:
     os.environ['CUDA_VISIBLE_DEVICES']='-1'
