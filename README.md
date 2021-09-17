@@ -85,7 +85,7 @@ $ python train.py
 ```
 
 Can even edit some configurations directly from the command line.
-The following list can be viewed through --help
+The following list can be viewed through `--help`
 ```bash
 $ python train.py -h
 
